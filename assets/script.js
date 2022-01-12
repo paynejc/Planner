@@ -22,17 +22,20 @@ $(document).ready(function () {
     $(".saveBtn").on("click", function () {
         var saveNote = $(this).prev().val()
         var hourId = $(this).parent().attr("id")
-        var update = JSON.parse(localStorage.getItem("description"))
+        localStorage.setItem( hourId, saveNote)
+        //var update = JSON.parse(localStorage.getItem("description"))
         var timeSlot = {
 
         }
 
     })
+    $("#hour-9 .description").val(localStorage.getItem("hour-9"))
 
 
-    
 });
 
 //If hourBlock is less than currentHour past use .this $(this).addClass("past")
 //if hourBlock is more than currentHour future use
 //if hourBlock is equal to currentHour Present
+
+//localStorage.setItem("key", "value")
